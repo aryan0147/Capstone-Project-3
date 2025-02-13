@@ -1,7 +1,12 @@
-Capstone-Projecr-3
+# Project Intro: Food Delivery Time Prediction 🚀
 ==============================
 
-Mlops Project
+Building FoodRush ETA, a ML-powered API that predicts food delivery times based on factors like restaurant preparation time, traffic conditions, and order details. 
+The backend is a FastAPI service, deployed on Render, and integrated with MLflow & DVC for model tracking. The DVC-tracked data is stored in DagsHub, ensuring efficient 
+version control and reproducibility
+
+A CI/CD pipeline automates model training, testing, and deployment, ensuring continuous improvements. The entire setup runs in a Dockerized environment, making it 
+production-ready and easily scalable. The API provides real-time delivery time estimates, helping food delivery platforms enhance customer experience. 
 
 Project Organization
 ------------
