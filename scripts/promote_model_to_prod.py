@@ -15,6 +15,8 @@ dagshub_url = "https://dagshub.com"
 repo_owner = "aryan0147"
 repo_name = "Capstone-Project-3"
 
+mlflow.set_tracking_uri(f"{dagshub_url}/{repo_owner}/{repo_name}.mlflow")
+
 def load_model_information(file_path):
     with open(file_path) as f:
         run_info = json.load(f)
