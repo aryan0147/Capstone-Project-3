@@ -18,10 +18,18 @@ set_config(transform_output="pandas")
 
 # initialize dagshub
 
+dagshub_token = os.getenv("DAGSHUB_TOKEN")
+if not dagshub_token:
+    raise EnvironmentError("DAGSHUB_PAT environment variable is not set")
 
-dagshub.init(repo_owner="aryan0147", repo_name="Capstone-Project-3", mlflow=True)
+os.environ["MLFLOW_TRACKING_USERNAME"] = dagshub_token
+os.environ["MLFLOW_TRACKING_PASSWORD"] = dagshub_token
 
-mlflow.set_tracking_uri("https://dagshub.com/aryan0147/Capstone-Project-3.mlflow")
+dagshub_url = "https://dagshub.com"
+repo_owner = "aryan0147"
+repo_name = "Capstone-Project-3"
+
+mlflow.set_tracking_uri(f"{dagshub_url}/{repo_owner}/{repo_name}.mlflow")
 
 
 class Data(BaseModel):
