@@ -3,10 +3,18 @@ import mlflow
 from mlflow import MlflowClient
 import dagshub
 import json
+import os
 
-dagshub.init(repo_owner="aryan0147", repo_name="Capstone-Project-3", mlflow=True)
+dagshub_token = os.getenv("DAGSHUB_PAT")
+if not dagshub_token:
+    raise EnvironmentError("DAGSHUB_PAT environment variable is not set")
 
-mlflow.set_tracking_uri("https://dagshub.com/aryan0147/Capstone-Project-3.mlflow")
+os.environ["MLFLOW_TRACKING_USERNAME"] = dagshub_token
+os.environ["MLFLOW_TRACKING_PASSWORD"] = dagshub_token
+
+dagshub_url = "https://dagshub.com"
+repo_owner = "aryan0147"
+repo_name = "Capstone-Project-3"
 
 
 def load_model_information(file_path):
