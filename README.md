@@ -1,7 +1,9 @@
 # Project Intro: Food Delivery Time Prediction 🚀
 ==============================
 
-Building FoodRush ETA, a ML-powered API that predicts food delivery times based on factors like restaurant preparation time, traffic conditions, and order details. 
+Buidling a MLOps Driven Food Delivery Time Prediction, a ML-powered API that predicts food delivery times based on factors like restaurant preparation time, traffic conditions, 
+and order details. 
+
 The backend is a FastAPI service, deployed on Render, and integrated with MLflow & DVC for model tracking. The DVC-tracked data is stored in DagsHub, ensuring efficient 
 version control and reproducibility
 
