@@ -9,7 +9,7 @@ import pandas as pd
 from sklearn.metrics import mean_absolute_error
 import os
 
-dagshub_token = os.getenv("DAGSHUB_PAT")
+dagshub_token = os.getenv("DAGSHUB_TOCKEN")
 if not dagshub_token:
     raise EnvironmentError("DAGSHUB_PAT environment variable is not set")
 
