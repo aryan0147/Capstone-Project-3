@@ -1,6 +1,0 @@
-[core]
-    remote = origin
-
-['remote "origin"']
-    url = s3://dvc
-    endpointurl = https://dagshub.com/aryan0147/Capstone-Project-3.s3
