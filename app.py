@@ -11,6 +11,7 @@ from sklearn import set_config
 from scripts.data_clean_utils import perform_data_cleaning
 import dagshub
 import mlflow.client
+import os
 
 # set the output as pandas
 set_config(transform_output="pandas")
@@ -141,4 +142,5 @@ def do_predictions(data: Data):
 
 
 if __name__ == "__main__":
-    uvicorn.run(app="app:app", host="0.0.0.0", port=8000)
+    port = int(os.getenv("PORT", 8000))  
+    uvicorn.run("app:app", host="0.0.0.0", port=port)
