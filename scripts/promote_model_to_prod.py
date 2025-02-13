@@ -4,7 +4,7 @@ import json
 from mlflow import MlflowClient
 import os
 
-dagshub_token = os.getenv("DAGSHUB_TOCKEN")
+dagshub_token = os.getenv("DAGSHUB_TOKEN")
 if not dagshub_token:
     raise EnvironmentError("DAGSHUB_PAT environment variable is not set")
 
