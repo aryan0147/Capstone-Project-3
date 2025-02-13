@@ -25,17 +25,11 @@ formatter = logging.Formatter(
 handler.setFormatter(formatter)
 
 # initialize dagshub
-import dagshub
 import mlflow.client
 
-dagshub.init(
-    repo_owner="himanshu1703", repo_name="swiggy-delivery-time-prediction", mlflow=True
-)
+dagshub.init(repo_owner="aryan0147", repo_name="Capstone-Project-3", mlflow=True)
 
-# set the mlflow tracking server
-mlflow.set_tracking_uri(
-    "https://dagshub.com/himanshu1703/swiggy-delivery-time-prediction.mlflow"
-)
+mlflow.set_tracking_uri("https://dagshub.com/aryan0147/Capstone-Project-3.mlflow")
 
 
 def load_model_information(file_path):
