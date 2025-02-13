@@ -27,6 +27,12 @@ jobs:
 
       - name: Fetch Data from DagsHub
         run: dvc pull
+      
+      - name: Run pipeline
+        env:
+          DAGSHUB_PAT: ${{ secrets.DAGSHUB_PAT }}
+        run: |
+          dvc repro
 
       - name: Test Model Registry
         env:
